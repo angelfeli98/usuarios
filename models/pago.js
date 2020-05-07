@@ -2,6 +2,7 @@
 
 var pago = require('mongoose'),
 Schema = pago.Schema;
+var usuario = require('./usuario');
 
 var PagoSchema = new Schema (
     {
@@ -33,14 +34,20 @@ var PagoSchema = new Schema (
                 dropDups: true
             }
         },
-        cvv: {
-            type: Number,
-            default: 000,
+          cvv: {
+            type: String,
+            default: '',
             required: [true,'Insrete un codigo de seguridad'],
             index: {
                 unique: false,
                 dropDups: true
             }
+        },
+        usuario: {
+            type: Schema.Types.ObjectId,
+            ref: 'usuario',
+            default: null,
+            required: [true, 'Inserte el propetario']
         }
     },
     {

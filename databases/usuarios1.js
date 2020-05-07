@@ -1,4 +1,4 @@
-const uri= "mongodb://localhost:20002/Paax";
+const uri= "mongodb://localhost:27017/Paax";
 var usuario = require('mongoose');
 
 options = {

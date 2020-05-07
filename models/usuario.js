@@ -28,10 +28,16 @@ var UsuarioSchema = new Schema (
             }
         },
         info_pago: {
-            type: Schema.Types.ObjectId, ref: 'pago',
+            type: Schema.Types.ObjectId,
+            ref: 'pago',
             default: null,
             required: false
         },
+        playlists:[{
+            type: Schema.Types.ObjectId,
+            default: null,
+            required: false
+        }],
         fecha_nacimiento: {
             type: Date,
             default: Date.now,
@@ -45,6 +51,33 @@ var UsuarioSchema = new Schema (
             type: String,
             default: '',
             required: [true,'Insrete un correo'],
+            index: {
+                unique: false,
+                dropDups: true
+            }
+        },
+        rol_usuario: {
+            type: Boolean,
+            default: true,
+            required: [true,'Insrete un rol_usuario'],
+            index: {
+                unique: false,
+                dropDups: true
+            }
+        },
+        rol_artista: {
+            type: Boolean,
+            default: true,
+            required: [true,'Insrete un rol_artista'],
+            index: {
+                unique: false,
+                dropDups: true
+            }
+        },
+        rol_admin: {
+            type: Boolean,
+            default: true,
+            required: [true,'Insrete un rol_admin'],
             index: {
                 unique: false,
                 dropDups: true

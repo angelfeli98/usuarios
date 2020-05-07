@@ -1,6 +1,6 @@
 var bodyParser = require('body-parser')
 var express = require('express')
-
+var cors = require('cors');
 var app = express()
 
 var api = require('./routers/usuario')
@@ -9,7 +9,7 @@ var api2 = require('./routers/pago')
 
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
-
+app.use(cors({origin: 'http://localhost:4200'}))
 
 app.use(function(req,res,next){
     //puede ser consumidad desde cualquier lugar

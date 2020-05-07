@@ -8,9 +8,9 @@ var api = express.Router();
 
 //api.get('/auto/:id?',autoController.prueba)
 
-api.get('/usuario/pago/:id?',pagoController.getPago)
-api.post('/usuario/pago',pagoController.savePago)
-api.put('/usuario/pago/:id?',pagoController.updatePago)
-api.delete('/usuario/pago/:id?',pagoController.deletePago)
+api.get('/usuario/pago/:token?',pagoController.getPago)
+api.post('/usuario/pago/:token?',pagoController.savePago)
+api.put('/usuario/pago/:token?',pagoController.updatePago)
+api.delete('/delete/pago',pagoController.deletePago)
 
 module.exports = api;
