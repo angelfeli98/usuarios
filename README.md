@@ -1,2 +1,2 @@
-# Paax
+# Open Music
 Proyecto
