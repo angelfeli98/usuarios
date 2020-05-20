@@ -1,4 +1,4 @@
-const uri = "mongodb+srv://angelfelipe:angelfelipe@usuario-ubkzd.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://feli:feli@cluster0-4mvut.mongodb.net/test?retryWrites=true&w=majority";
 
 options = {
   useNewUrlParser: true
