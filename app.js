@@ -9,7 +9,7 @@ var api2 = require('./routers/pago')
 
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
-app.use(cors({origin: 'http://localhost:4200'}))
+app.use(cors())
 
 app.use(function(req,res,next){
     //puede ser consumidad desde cualquier lugar
