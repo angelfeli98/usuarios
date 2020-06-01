@@ -9,3 +9,4 @@ var port = process.env.PORT || 7070;
 app.listen(7070, function(){
     console.log('Servicio de usuario corriendo')
 });
+ 
